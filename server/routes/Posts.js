@@ -4,7 +4,7 @@ const { Posts } = require("../models");
 
 router.get("/", async (req, res) => {
     const listOfPosts = await Posts.findAll();
-    res.send(listOfPosts);
+    res.json(listOfPosts);
 });
 
 router.post("/", async (req, res) => {
